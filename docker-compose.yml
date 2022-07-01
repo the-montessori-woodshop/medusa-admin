@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  medusa_admin:
+    image: medusa_admin
+    container_name: medusa_admin
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./.env
+    ports:
+      - "7001:80"
